@@ -1,30 +1,30 @@
 //naming variables
 var currentDayEl = $("#currentDay");
-var input9El = $("#9"); // not sure about this one so far
+var inputEls = $("input");
+console.log(inputEls)
 
 var today = moment();
 var todayHour = moment().format("H");
 
-//Sets the date
-currentDayEl.text(today.format("dddd, MMMM Do"));
+console.log(todayHour)
 
-function setBlockColor() {
-  var blockTime = ~~input9El.attr("id"); //the ~~ makes it a number 
-  console.log(blockTime);
-  console.log(todayHour);
-  
+inputEls.each(function(i , input){
+  console.log($(input).attr("id"))
+  $(input).addClass(setBGColor($(input).attr("id")))
 
-  if (blockTime === todayHour) {
-    $("#9").addClass("present");
-    console.log("i'm in the present!");
-  } else if (blockTime < todayHour) {
-    $("#9").addClass("past");
-    console.log("i'm in the past!");
+})
+
+function setBGColor(id){
+  if (id == todayHour) {
+    return "present";
+  } else if (id < todayHour) {
+    return "past";
   } else {
-    $("#9").addClass("future");
-    console.log("i'm in the future!");
+    return "future";
   }
 }
+  
+
 
 
 
@@ -46,4 +46,6 @@ function setBlockColor() {
 // todo upon refresh get from local storage and show it on input field (text content)
 
 
-setBlockColor();
+//Sets the date
+currentDayEl.text(today.format("dddd, MMMM Do"));
+
