@@ -11,3 +11,4 @@ https://a-riveragonzalez.github.io/work-day-scheduler/
 https://github.com/a-riveragonzalez/work-day-scheduler
 
 ## Preview
+![work-day-scheduler-gif](work-day-scheduler.gif)
