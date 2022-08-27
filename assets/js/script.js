@@ -3,8 +3,6 @@ var currentDayEl = $("#currentDay");
 var inputEls = $("input");
 console.log(inputEls)
 
-var icon9 = $("#icon9"); //for testing
-
 var iconEls = $(".saveBtn");
 
 var today = moment();
@@ -56,7 +54,5 @@ function renderStorage(){
 
 //Sets the date
 currentDayEl.text(today.format("dddd, MMMM Do"));
-
-// add event listener
 
 renderStorage();
