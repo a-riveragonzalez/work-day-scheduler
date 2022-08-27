@@ -6,7 +6,7 @@ console.log(inputEls)
 var iconEls = $(".saveBtn");
 
 var today = moment();
-var todayHour = 11//moment().format("H");
+var todayHour = moment().format("H");
 
 // on page load, sets time blocks' background colors
 inputEls.each(function(i , input){
